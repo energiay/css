@@ -8,26 +8,69 @@
 <body>
 
     <style>
-        body {
+        div.body {
             margin: 1.5em;
         }
 
-        .box {
+        div.body > .box {
             padding: 1em;
             border-radius: 1em;
             background-color: lightgray;
         }
 
-        .box-small {
+        div.body > .box-small {
             font-size: 12px;
         }
-        .box-large {
+        div.body > .box-large {
             font-size: 18px;
         }
     </style> 
+    <div class="body">
+        <span class="box box-small">Маленький</span>
+        <span class="box box-large">Большой</span>
+    </div>
+
     
-    <span class="box box-small">Маленький</span>
-    <span class="box box-large">Большой</span>
+
+    <hr>
+
+
+    <style>
+        :root {
+            font-size: 0.75em;
+        }
+        @media (min-width: 800px) {
+            :root {
+                font-size: 0.875em;
+            }
+        }
+        @media (min-width: 1200px) {
+            :root {
+                font-size: 1em;
+            }
+        }
+
+        div.root > .panel {
+            padding: 1em;
+            border-radius: 0.5em;
+            border: 1px solid #999;
+        }
+
+        div.root > .panel > h2 {
+            margin-top: 0;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    </style>
+    <div class="root">
+        <div class="panel">
+            <h2>Lorem Ipsum</h2>
+            <div class="panel-body">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </div>
+        </div>
+    </div>
     
 </body>
 </html>
